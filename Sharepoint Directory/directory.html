@@ -45,25 +45,6 @@
         border-radius: 8px;
     }
 
-    button {
-        display: inline-flex;
-        padding: 1rem;
-        margin-top: .25rem;
-        border-radius: 20px;
-        border: 2px solid lightgrey;
-        transition: all 0.4s ease 0s;
-        background-color: transparent;
-    }
-
-    button:hover,
-    button.active {
-        background-color: #f0c141;
-        box-shadow: 0px 15px 20px rgba(228, 171, 48, 0.4);
-        cursor: pointer;
-        color: #fff;
-        transform: translateY(-7px);
-    }
-
     .firstLevel {
         display: inline-block;
         padding: 1rem;
@@ -71,11 +52,17 @@
         font-weight: bold;
         border-radius: 20px;
         border: transparent;
-        transition: all 0.3s ease 0s;
+        transition: all 0.2s ease 0s;
     }
 
     .firstLevel:hover,
-    .firstLevel.active {
+    .firstLevel.active,
+    .secondLevel:hover,
+    .secondLevel.active,
+    .thirdLevel:hover,
+    .thirdLevel.active,
+    .fourthLevel:hover,
+    .fourthLevel.active {
         background-color: #f0c141;
         box-shadow: 0px 15px 20px rgba(228, 171, 48, 0.4);
         color: #fff;
@@ -85,6 +72,22 @@
     .firstLevel.active {
         transform: translateY(0px);
         box-shadow: none;
+    }
+
+    .secondLevelStatic,
+    .thirdLevelStatic,
+    .fourthLevelStatic,
+    .fifthLevelStatic,
+    .secondLevel,
+    .thirdLevel,
+    .fourthLevel {
+        display: inline-flex;
+        padding: 1rem;
+        margin-top: .25rem;
+        border-radius: 20px;
+        border: 2px solid lightgrey;
+        transition: all 0.6s ease 0s;
+        background-color: transparent;
     }
 
     .secondLevel,
@@ -145,372 +148,372 @@
 </style>
 
 <body>
-    <!-- Naming convention:: BUTTON ID: (this would be 3 levels down) buttonID_x_newDirectory, LEVEL ID: (parentDirectory_newDirectory) -->
+    <!-- Naming convention:: DIV ID: (this would be 3 levels down) divID_x_newDirectory, LEVEL ID: (parentDirectory_newDirectory) -->
     <div class="content">
-        <button id="d1" class="firstLevel" onclick="checkDirectory('departments', 'd1', 'content')"
+        <div id="d1" class="firstLevel" onmouseover="checkDirectory('departments', 'd1', 'content')"
             data-toggle="tooltip" data-placement="bottom"
             title="Contains internal working documents specific to departments">
             DEPARTMENTS
-        </button>
-        <button id="d2" class="firstLevel" onclick="checkDirectory('administration', 'd2', 'content')"
+        </div>
+        <div id="d2" class="firstLevel" onmouseover="checkDirectory('administration', 'd2', 'content')"
             data-toggle="tooltip" data-placement="bottom"
             title="Contains internal working documents specific to administration">
             ADMINISTRATION
-        </button>
-        <button id="d3" class="firstLevel" onclick="checkDirectory('special-projects', 'd3', 'content')"
+        </div>
+        <div id="d3" class="firstLevel" onmouseover="checkDirectory('special-projects', 'd3', 'content')"
             data-toggle="tooltip" data-placement="bottom"
             title="Contains unique activities that may fall outside the scope of regular duties (Specific to STP)">
             SPECIAL PROJECTS
-        </button>
-        <button id="d4" class="firstLevel" onclick="checkDirectory('statewide-contracts', 'd4', 'content')"
+        </div>
+        <div id="d4" class="firstLevel" onmouseover="checkDirectory('statewide-contracts', 'd4', 'content')"
             data-toggle="tooltip" data-placement="bottom"
             title="Contains internal working documents related to statewide contracts">
             STATEWIDE CONTRACTS
-        </button>
-        <button id="d5" class="firstLevel" onclick="checkDirectory('resources', 'd5', 'content')" data-toggle="tooltip"
+        </div>
+        <div id="d5" class="firstLevel" onmouseover="checkDirectory('resources', 'd5', 'content')" data-toggle="tooltip"
             data-placement="bottom" title="Contains internal working documents related to resources">
             RESOURCES
-        </button>
-        <button id="d6" class="firstLevel" onclick="checkDirectory('staff-folders', 'd6', 'content')"
+        </div>
+        <div id="d6" class="firstLevel" onmouseover="checkDirectory('staff-folders', 'd6', 'content')"
             data-toggle="tooltip" data-placement="bottom" title="Contains folders for all STP staff">
             STAFF FOLDERS
-        </button>
-        <button id="d7" class="firstLevel" onclick="checkDirectory('archive', 'd7', 'content')" data-toggle="tooltip"
+        </div>
+        <div id="d7" class="firstLevel" onmouseover="checkDirectory('archive', 'd7', 'content')" data-toggle="tooltip"
             data-placement="bottom" title="Contains internal documents that have not been used for more than 1 year">
             ARCHIVE
-        </button>
-        <button id="d8" class="firstLevel" onclick="checkDirectory('policy', 'd8', 'content')" data-toggle="tooltip"
+        </div>
+        <div id="d8" class="firstLevel" onmouseover="checkDirectory('policy', 'd8', 'content')" data-toggle="tooltip"
             data-placement="bottom" title="Contains internal working documents related to policy">
             POLICY
-        </button>
+        </div>
 
         <div id="departments" class="inner"></div>
         <div id="administration" class="inner">
-            <button class="secondLevel" id="d2_virtual-communication"
-                onclick="newDirectory('d2_virtual-communication', 'administration', 'administration_virtual-communication')"
+            <div class="secondLevel" id="d2_virtual-communication"
+                onmouseover="newDirectory('d2_virtual-communication', 'administration', 'administration_virtual-communication')"
                 data-toggle="tooltip" data-placement="top" title="insert info here">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>VIRTUAL COMMUNICATION</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="insert something">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="insert something">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>NET CONFERENCING ACCOUNTS</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="asdf">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="asdf">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>OFFICE MAINTENANCE</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>AUTHORITY APPROVAL</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>TELECOM</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>FI$CAL</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>HR</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>STAFF ADMINISTRATION</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>LOGS</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>G-DRIVE DIRECTORY</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>DATA DRILL</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>CTS BILLABLE HOURS</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>BILLING & METRICS</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>BCP DRILLS</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>MEETINGS</p>
-            </button>
-            <button class="secondLevel" id="d2_tracking"
-                onclick="newDirectory('d2_tracking', 'administration', 'tracking')" data-toggle="tooltip"
+            </div>
+            <div class="secondLevel" id="d2_tracking"
+                onmouseover="newDirectory('d2_tracking', 'administration', 'tracking')" data-toggle="tooltip"
                 data-placement="top" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>TRACKING</p>
-            </button>
+            </div>
             <!-- Start of third level for administration -->
             <div id="administration_virtual-communication" class="show">
-                <button class="thirdLevelStatic" data-toggle="tooltip" data-placement="bottom"
+                <div class="thirdLevelStatic" data-toggle="tooltip" data-placement="bottom"
                     title="insert some info here">
                     <img src="docset.png" , alt="docset" , width="20" , height="22">
                     <p>third level doc</p>
-                </button>
-                <button class="thirdLevel" id="d2_x_another-third-level-doc"
-                    onclick="newDirectory('d2_x_another-third-level-doc', 'administration_virtual-communication', 'virtual-communication_another-third-level-doc')"
+                </div>
+                <div class="thirdLevel" id="d2_x_another-third-level-doc"
+                    onmouseover="newDirectory('d2_x_another-third-level-doc', 'administration_virtual-communication', 'virtual-communication_another-third-level-doc')"
                     data-toggle="tooltip" data-placement="top" title="insert some info here">
                     <img src="docset.png" , alt="docset" , width="20" , height="22">
                     <p>another third level doc</p>
-                </button>
+                </div>
                 <!-- Start of fourth level for administration -->
                 <div id="virtual-communication_another-third-level-doc" class="show">
-                    <button class="fourthLevel" id="d2_x_x_fourth-level-doc"
-                        onclick="newDirectory('d2_x_x_fourth-level-doc', 'virtual-communication_another-third-level-doc', 'another-third-level-doc_fourth-level-doc')"
+                    <div class="fourthLevel" id="d2_x_x_fourth-level-doc"
+                        onmouseover="newDirectory('d2_x_x_fourth-level-doc', 'virtual-communication_another-third-level-doc', 'another-third-level-doc_fourth-level-doc')"
                         data-toggle="tooltip" data-placement="top" title="insert some info here">
                         <img src="docset.png" , alt="docset" , width="20" , height="22">
                         <p>fourth level doc</p>
-                    </button>
-                    <button class="fourthLevelStatic" data-toggle="tooltip" data-placement="bottom"
+                    </div>
+                    <div class="fourthLevelStatic" data-toggle="tooltip" data-placement="bottom"
                         title="insert some info here">
                         <img src="docset.png" , alt="docset" , width="20" , height="22">
                         <p>another fourth level doc</p>
-                    </button>
+                    </div>
                     <!-- Start of fifth level for administration -->
                     <div id="another-third-level-doc_fourth-level-doc" class="show">
-                        <button class="fifthLevelStatic" data-toggle="tooltip" data-placement="bottom"
+                        <div class="fifthLevelStatic" data-toggle="tooltip" data-placement="bottom"
                             title="insert some info here">
                             <img src="docset.png" , alt="docset" , width="20" , height="22">
                             <p>fifth level doc</p>
-                        </button>
-                        <button class="fifthLevelStatic" data-toggle="tooltip" data-placement="bottom"
+                        </div>
+                        <div class="fifthLevelStatic" data-toggle="tooltip" data-placement="bottom"
                             title="insert some info here">
                             <img src="docset.png" , alt="docset" , width="20" , height="22">
                             <p>another fifth level doc</p>
-                        </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <div id="special-projects" class="inner"></div>
         <div id="statewide-contracts" class="inner">
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="folder.png" , alt="docset" , width="20" , height="22">
                 <p>_Archive</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="excel.png" , alt="docset" , width="20" , height="22">
                 <p>_Contract expiration tracker</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>FirstNET C3A2FN9-18</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>Telecom.PS.Radio LPAs transfer from DGS</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>NVLPT UTAH - NASPO Valuepoint Contracts</p>
-            </button>
+            </div>
 
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>Rural Connectivity Project</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>Speech Generating Device Statewides</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>Satellite Voice-Data Services</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>Telemetry</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>STP-SW-1512-03_CDT SW PC Based RoIP Console</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>STP-SW-1512-03_Amendment</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>STPD-SW-1404-02_CHP Dispatch Consoles</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>STPD-SW-1311-01_CDCR Radio Infa RFP</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>NASPO Wireless Data Voice Accessories Review</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>MiCTA</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>CALNET Emergency Amendments - 2020</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>CALNET DNCS</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>CALNET</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>MiCTA Amendments - COVID 19</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>Structured Cabling Services</p>
-            </button>
+            </div>
         </div>
         <div id="resources" class="inner">
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>PROTESTS AND PRAs</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>CONTRACT BONDS</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>EVAQ</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>BROWN BAGS</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>TOOLS</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>TELEWORK</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>JOB AIDES</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>PROCESSES & PROCEDURES</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>GUIDELINES</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>FAQ & SAMPLES</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>EMERGENCY CONTRACTS CALENDAR</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>CONTRACT NEGOTIATIONS</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>CHECKLISTS</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>AIO-CIO LIST</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>RFP</p>
-            </button>
+            </div>
         </div>
         <div id="staff-folders" class="inner"></div>
         <div id="archive" class="inner"></div>
         <div id="policy" class="inner">
-            <button class="secondLevel" id="d8_policy-manuals"
-                onclick="newDirectory('d8_policy-manuals', 'policy', 'policy_policy-manuals')" data-toggle="tooltip"
+            <div class="secondLevel" id="d8_policy-manuals"
+                onmouseover="newDirectory('d8_policy-manuals', 'policy', 'policy_policy-manuals')" data-toggle="tooltip"
                 data-placement="top" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>POLICY MANUALS</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>DGS BB</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>STP TL</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>DEPARTMENT DELEGATED AUTHORITY</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>STATUTES</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>ACCREDITATION</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>POLICY</p>
-            </button>
-            <button class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
+            </div>
+            <div class="secondLevelStatic" data-toggle="tooltip" data-placement="bottom" title="">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>LEGISLATION</p>
-            </button>
-            <button class="secondLevelStatic">
+            </div>
+            <div class="secondLevelStatic">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>AB971</p>
-            </button>
+            </div>
             <!-- Start of third level for policy -->
             <div id="policy_policy-manuals" class="show">
-                <button class="thirdLevelStatic" data-toggle="tooltip" data-placement="bottom"
+                <div class="thirdLevelStatic" data-toggle="tooltip" data-placement="bottom"
                     title="insert some info here">
                     <img src="docset.png" , alt="docset" , width="20" , height="22">
                     <p>third level doc</p>
-                </button>
-                <button class="thirdLevel" id="d8_x_another-third-level-doc"
-                    onclick="newDirectory('d8_x_another-third-level-doc', 'policy_policy-manuals', 'policy-manuals_another-third-level-doc')"
+                </div>
+                <div class="thirdLevel" id="d8_x_another-third-level-doc"
+                    onmouseover="newDirectory('d8_x_another-third-level-doc', 'policy_policy-manuals', 'policy-manuals_another-third-level-doc')"
                     data-toggle="tooltip" data-placement="top" title="insert some info here">
                     <img src="docset.png" , alt="docset" , width="20" , height="22">
                     <p>another third level doc</p>
-                </button>
+                </div>
                 <!-- Start of fourth level for policy -->
                 <div id="policy-manuals_another-third-level-doc" class="show">
-                    <button class="fourthLevelStatic" data-toggle="tooltip" data-placement="bottom"
+                    <div class="fourthLevelStatic" data-toggle="tooltip" data-placement="bottom"
                         title="insert some info here">
                         <img src="docset.png" , alt="docset" , width="20" , height="22">
                         <p>fourth level doc</p>
-                    </button>
+                    </div>
                 </div>
             </div>
             <script>
                 $(document).ready(function () {
                     $('[data-toggle="tooltip"]').tooltip();
                 });
-                function showDirectory(nextDirID, buttonID, parentClass = null) {
-                    var button = document.getElementById(buttonID);
+                function showDirectory(nextDirID, divID, parentClass = null) {
+                    var div = document.getElementById(divID);
                     var currDirectory = document.getElementById(nextDirID);
                     if (parentClass != null) {
                         var children = document.querySelector("." + parentClass).children;
@@ -525,7 +528,7 @@
                             }
                         }
                     }
-                    button.classList.add("active");
+                    div.classList.add("active");
                     currDirectory.classList.add("show");
                 }
                 function resetDirectory(nextDirID) {
@@ -561,23 +564,23 @@
                         }
                     }
                 }
-                function checkDirectory(nextDirID, buttonID, parentClass = null) {
-                    showDirectory(nextDirID, buttonID, parentClass);
+                function checkDirectory(nextDirID, divID, parentClass = null) {
+                    showDirectory(nextDirID, divID, parentClass);
                     resetDirectory(nextDirID);
                 }
-                function newDirectory(buttonID, parentID, nextDirID) {
+                function newDirectory(divID, parentID, nextDirID) {
                     var children = document.querySelector("#" + parentID).children;
                     for (var i = 0; i < children.length; i++) {
                         tagName = children[i].tagName;
                         classList = children[i].classList;
-                        if (tagName = "DIV" && children[i].id != nextDirID && children[i].id != buttonID) {
+                        if (tagName = "DIV" && children[i].id != nextDirID && children[i].id != divID) {
                             classList.add("hide");
                         }
                         else {
                             classList.remove("hide");
                         }
                     }
-                    showDirectory(nextDirID, buttonID);
+                    showDirectory(nextDirID, divID);
                     resetDirectory(nextDirID);
                 }
             </script>
