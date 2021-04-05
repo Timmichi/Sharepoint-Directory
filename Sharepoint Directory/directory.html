@@ -24,7 +24,7 @@
 
     .inner {
         text-align: left;
-        margin-top: 6rem;
+        margin-top: 3rem;
         margin-left: auto;
         margin-right: auto;
         padding: 1rem;
@@ -54,6 +54,7 @@
         background-color: #f0c141;
         color: #fff;
         position: relative;
+        z-index: 1000;
         /* transform: translateY(-7px); */
     }
 
@@ -67,6 +68,7 @@
         box-shadow: 0px 15px 20px rgba(228, 171, 48, 0.4);
         color: #fff;
         transform: translateY(-7px);
+        z-index: 1000;
     }
 
     .secondLevelStatic,
@@ -76,9 +78,10 @@
     .secondLevel,
     .thirdLevel,
     .fourthLevel {
-        display: inline-flex;
+        /* display: inline-flex; Use this if you want to display divs horizontally*/
         padding: 1rem;
-        margin-top: .25rem;
+        float: left;
+        clear: left;
         border-radius: 20px;
         border: 2px solid lightgrey;
         transition: all 0.3s ease 0s;
@@ -86,6 +89,8 @@
         cursor: pointer;
         position: relative;
         z-index: 100;
+        font-size: 13px;
+        /* font-weight: bold; */
     }
 
     .secondLevel,
@@ -155,11 +160,13 @@
 
     img {
         margin-right: .25rem;
+        float: left;
     }
 
     p {
         margin-top: 0;
         margin-bottom: 0;
+        float: right;
     }
 
     .show {
@@ -218,7 +225,7 @@
         <div id="administration" class="inner">
             <div class="secondLevel" id="d2_virtual-communication"
                 onmouseover="newDirectory('d2_virtual-communication', 'administration', 'administration_virtual-communication')">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <!-- <img src="docset.png" , alt="docset" , width="20" , height="22"> -->
                 <p>VIRTUAL COMMUNICATION</p>
                 <span class="tooltip-bottom">insert something here</span>
             </div>
