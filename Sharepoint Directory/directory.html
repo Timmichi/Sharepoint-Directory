@@ -18,31 +18,30 @@
         margin-top: 2rem;
         margin-right: auto;
         margin-left: auto;
-        width: 1300px;
+        width: 1000px;
         text-align: center;
     }
 
     .inner {
         text-align: left;
-        margin-top: 3rem;
+        margin-top: 2rem;
         margin-left: auto;
         margin-right: auto;
         padding: 1rem;
-        width: 1100px;
+        width: 1000px;
         display: none;
         border: transparent;
-        border-radius: 8px;
     }
 
     .firstLevel {
         display: inline-block;
-        padding: 1rem;
-        background-color: rgb(158, 181, 231);
-        font-weight: bold;
-        border-radius: 20px;
+        padding: 0.6rem;
+        background-color: #03787c;
+        color: #fff;
+        border-radius: 8px;
         border: transparent;
         transition: all 0.3s ease 0s;
-        cursor: pointer;
+        cursor: default;
         position: relative;
         z-index: 100;
     }
@@ -52,10 +51,8 @@
         transform: translateY(0px);
         box-shadow: none;
         background-color: #f0c141;
-        color: #fff;
         position: relative;
         z-index: 1000;
-        /* transform: translateY(-7px); */
     }
 
     .secondLevel:hover,
@@ -79,18 +76,18 @@
     .thirdLevel,
     .fourthLevel {
         /* display: inline-flex; Use this if you want to display divs horizontally*/
-        padding: 1rem;
+        padding: 0.5rem;
+        margin-top: 3px;
         float: left;
         clear: left;
-        border-radius: 20px;
-        border: 2px solid lightgrey;
+        border-radius: 8px;
+        border: 1px solid transparent;
         transition: all 0.3s ease 0s;
         background-color: transparent;
-        cursor: pointer;
+        cursor: default;
         position: relative;
         z-index: 100;
         font-size: 13px;
-        /* font-weight: bold; */
     }
 
     .secondLevel,
@@ -104,18 +101,18 @@
     .thirdLevelStatic:hover,
     .fourthLevelStatic:hover,
     .fifthLevelStatic:hover {
-        background-color: lightgrey;
+        background-color: rgb(190, 190, 190);
         box-shadow: 0px 15px 20px rgba(172, 167, 157, 0.4);
         color: #fff;
         transform: translateY(-7px);
-        cursor: help;
+        cursor: default;
         z-index: 1000;
     }
 
     .secondLevel.active,
     .thirdLevel.active,
     .fourthLevel.active {
-        transform: translateY(-100px);
+        transform: translateY(-40px);
         box-shadow: none;
     }
 
@@ -131,7 +128,7 @@
         font-weight: normal;
         /* Position the tooltip */
         position: absolute;
-        top: 110%;
+        top: 115%;
         left: 50%;
         transform: translate(-50%);
     }
@@ -147,6 +144,33 @@
         border-color: transparent transparent black transparent;
     }
 
+    .tooltip-right {
+        visibility: hidden;
+        width: 140px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 5px;
+        font-size: 14px;
+        font-weight: normal;
+        /* Position the tooltip */
+        position: absolute;
+        top: 10%;
+        left: calc(100% + 10px);
+    }
+
+    .tooltip-right::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 100%;
+        margin-top: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent black transparent transparent;
+    }
+
     .firstLevel:hover .tooltip-bottom,
     .secondLevel:hover .tooltip-bottom,
     .thirdLevel:hover .tooltip-bottom,
@@ -154,7 +178,14 @@
     .secondLevelStatic:hover .tooltip-bottom,
     .thirdLevelStatic:hover .tooltip-bottom,
     .fourthLevelStatic:hover .tooltip-bottom,
-    .fifthLevelStatic:hover .tooltip-bottom {
+    .fifthLevelStatic:hover .tooltip-bottom,
+    .secondLevel:hover .tooltip-right,
+    .thirdLevel:hover .tooltip-right,
+    .fourthLevel:hover .tooltip-right,
+    .secondLevelStatic:hover .tooltip-right,
+    .thirdLevelStatic:hover .tooltip-right,
+    .fourthLevelStatic:hover .tooltip-right,
+    .fifthLevelStatic:hover .tooltip-right {
         visibility: visible;
     }
 
@@ -164,7 +195,7 @@
     }
 
     p {
-        margin-top: 0;
+        margin-top: 3px;
         margin-bottom: 0;
         float: right;
     }
@@ -179,7 +210,7 @@
 
     @media only screen and (max-width:1300px) {
         .content {
-            width: 1100px;
+            width: 1000px;
         }
     }
 </style>
@@ -223,96 +254,104 @@
 
         <div id="departments" class="inner"></div>
         <div id="administration" class="inner">
-            <div class="secondLevel" id="d2_virtual-communication"
-                onmouseover="newDirectory('d2_virtual-communication', 'administration', 'administration_virtual-communication')">
-                <!-- <img src="docset.png" , alt="docset" , width="20" , height="22"> -->
-                <p>VIRTUAL COMMUNICATION</p>
-                <span class="tooltip-bottom">insert something here</span>
-            </div>
-            <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
-                <p>NET CONFERENCING ACCOUNTS</p>
-                <span class="tooltip-bottom">insert something here</span>
-            </div>
-            <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
-                <p>OFFICE MAINTENANCE</p>
-                <span class="tooltip-bottom">insert something here</span>
-            </div>
-            <div class="secondLevelStatic">
+            <div class="secondLevel" id="d2_authority-approval"
+                onmouseover="newDirectory('d2_authority-approval', 'administration', 'administration_authority-approval')">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>AUTHORITY APPROVAL</p>
-            </div>
-            <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
-                <p>TELECOM</p>
-            </div>
-            <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
-                <p>FI$CAL</p>
-            </div>
-            <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
-                <p>HR</p>
-            </div>
-            <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
-                <p>STAFF ADMINISTRATION</p>
-            </div>
-            <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
-                <p>LOGS</p>
-            </div>
-            <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
-                <p>G-DRIVE DIRECTORY</p>
-            </div>
-            <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
-                <p>DATA DRILL</p>
-            </div>
-            <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
-                <p>CTS BILLABLE HOURS</p>
-            </div>
-            <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
-                <p>BILLING & METRICS</p>
+                <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>BCP DRILLS</p>
+                <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
-                <p>MEETINGS</p>
+                <p>BILLING & METRICS</p>
+                <span class="tooltip-right">insert something here</span>
             </div>
-            <div class="secondLevel" id="d2_tracking"
-                onmouseover="newDirectory('d2_tracking', 'administration', 'tracking')">
+            <div class="secondLevelStatic">
+                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <p>CTS BILLABLE HOURS</p>
+                <span class="tooltip-right">insert something here</span>
+
+            </div>
+            <div class="secondLevelStatic">
+                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <p>DATA DRILL</p>
+                <span class="tooltip-right">insert something here</span>
+            </div>
+            <div class="secondLevelStatic">
+                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <p>FI$CAL</p>
+                <span class="tooltip-right">insert something here</span>
+            </div>
+            <div class="secondLevelStatic">
+                <img src="excel.png" , alt="docset" , width="20" , height="22">
+                <p>GPOS Directory</p>
+                <span class="tooltip-right">insert something here</span>
+            </div>
+            <div class="secondLevelStatic">
+                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <p>HR</p>
+                <span class="tooltip-right">insert something here</span>
+            </div>
+            <div class="secondLevelStatic">
+                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <p>LOGS</p>
+                <span class="tooltip-right">insert something here</span>
+            </div>
+            <span class="tooltip-right">insert something here</span>
+            <div class="secondLevelStatic">
+                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <p>MEETINGS</p>
+                <span class="tooltip-right">insert something here</span>
+            </div>
+            <div class="secondLevelStatic">
+                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <p>OFFICE MAINTENANCE</p>
+                <span class="tooltip-right">insert something here</span>
+            </div>
+            <div class="secondLevelStatic">
+                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <p>STAFF ADMINISTRATION</p>
+                <span class="tooltip-right">insert something here</span>
+            </div>
+            <div class="secondLevelStatic">
+                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <p>TELECOM</p>
+                <span class="tooltip-right">insert something here</span>
+            </div>
+            <div class="secondLevelStatic">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>TRACKING</p>
-                <span class="tooltip-bottom">insert something here</span>
+                <span class="tooltip-right">insert something here</span>
+            </div>
+            <div class="secondLevelStatic">
+                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <p>VIRTUAL COMMUNICATION ACCOUNTS</p>
+                <span class="tooltip-right">insert something here</span>
             </div>
             <!-- Start of third level for administration -->
-            <div id="administration_virtual-communication" class="show">
+            <div id="administration_authority-approval" class="show">
                 <div class="thirdLevelStatic">
                     <img src="docset.png" , alt="docset" , width="20" , height="22">
                     <p>third level doc</p>
-                    <span class="tooltip-bottom">insert something here</span>
+                    <span class="tooltip-right">insert something here</span>
                 </div>
                 <div class="thirdLevel" id="d2_x_another-third-level-doc"
-                    onmouseover="newDirectory('d2_x_another-third-level-doc', 'administration_virtual-communication', 'virtual-communication_another-third-level-doc')">
+                    onmouseover="newDirectory('d2_x_another-third-level-doc', 'administration_authority-approval', 'authority-approval_another-third-level-doc')">
                     <img src="docset.png" , alt="docset" , width="20" , height="22">
                     <p>another third level doc</p>
-                    <span class="tooltip-bottom">insert something here</span>
+                    <span class="tooltip-right">insert something here</span>
                 </div>
                 <!-- Start of fourth level for administration -->
-                <div id="virtual-communication_another-third-level-doc" class="show">
+                <div id="authority-approval_another-third-level-doc" class="show">
                     <div class="fourthLevel" id="d2_x_x_fourth-level-doc"
-                        onmouseover="newDirectory('d2_x_x_fourth-level-doc', 'virtual-communication_another-third-level-doc', 'another-third-level-doc_fourth-level-doc')">
+                        onmouseover="newDirectory('d2_x_x_fourth-level-doc', 'authority-approval_another-third-level-doc', 'another-third-level-doc_fourth-level-doc')">
                         <img src="docset.png" , alt="docset" , width="20" , height="22">
                         <p>fourth level doc</p>
-                        <span class="tooltip-bottom">insert something here</span>
+                        <span class="tooltip-right">insert something here</span>
                     </div>
                     <div class="fourthLevelStatic">
                         <img src="docset.png" , alt="docset" , width="20" , height="22">
@@ -323,295 +362,321 @@
                         <div class="fifthLevelStatic">
                             <img src="docset.png" , alt="docset" , width="20" , height="22">
                             <p>fifth level doc</p>
-                            <span class="tooltip-bottom">insert something here</span>
+                            <span class="tooltip-right">insert something here</span>
                         </div>
                         <div class="fifthLevelStatic">
                             <img src="docset.png" , alt="docset" , width="20" , height="22">
                             <p>another fifth level doc</p>
-                            <span class="tooltip-bottom">insert something here</span>
+                            <span class="tooltip-right">insert something here</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="special-projects" class="inner"></div>
-        <div id="statewide-contracts" class="inner">
+        <div id="special-projects" class="inner">
+            <div class="secondLevelStatic">
+                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <p>COMPLETED</p>
+                <span class="tooltip-right">insert something here</span>
+            </div>
+            <div class="secondLevelStatic">
+                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <p>IN PROGRESS</p>
+                <span class="tooltip-right">insert something here</span>
+            </div>
             <div class="secondLevelStatic">
                 <img src="folder.png" , alt="docset" , width="20" , height="22">
-                <p>_Archive</p>
+                <p>P3</p>
+                <span class="tooltip-right">insert something here</span>
             </div>
+        </div>
+        <div id="statewide-contracts" class="inner">
             <div class="secondLevelStatic">
                 <img src="excel.png" , alt="docset" , width="20" , height="22">
                 <p>_Contract expiration tracker</p>
-            </div>
-            <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
-                <p>FirstNET C3A2FN9-18</p>
-            </div>
-            <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
-                <p>Telecom.PS.Radio LPAs transfer from DGS</p>
-            </div>
-            <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
-                <p>NVLPT UTAH - NASPO Valuepoint Contracts</p>
-            </div>
-
-            <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
-                <p>Rural Connectivity Project</p>
-            </div>
-            <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
-                <p>Speech Generating Device Statewides</p>
-            </div>
-            <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
-                <p>Satellite Voice-Data Services</p>
-            </div>
-            <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
-                <p>Telemetry</p>
-            </div>
-            <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
-                <p>STP-SW-1512-03_CDT SW PC Based RoIP Console</p>
-            </div>
-            <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
-                <p>STP-SW-1512-03_Amendment</p>
-            </div>
-            <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
-                <p>STPD-SW-1404-02_CHP Dispatch Consoles</p>
-            </div>
-            <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
-                <p>STPD-SW-1311-01_CDCR Radio Infa RFP</p>
-            </div>
-            <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
-                <p>NASPO Wireless Data Voice Accessories Review</p>
-            </div>
-            <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
-                <p>MiCTA</p>
-            </div>
-            <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
-                <p>CALNET Emergency Amendments - 2020</p>
-            </div>
-            <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
-                <p>CALNET DNCS</p>
+                <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>CALNET</p>
+                <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
-                <p>MiCTA Amendments - COVID 19</p>
+                <p>CALNET DNCS</p>
+                <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
-                <p>Structured Cabling Services</p>
-            </div>
-        </div>
-        <div id="resources" class="inner">
-            <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
-                <p>PROTESTS AND PRAs</p>
-            </div>
-            <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
-                <p>CONTRACT BONDS</p>
+                <p>CALNET Emergency Amendments - 2020</p>
+                <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>EVAQ</p>
+                <span class="tooltip-right">insert something here</span>
+            </div>
+
+            <div class="secondLevelStatic">
+                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <p>FirstNET C3A2FN9-18</p>
+                <span class="tooltip-right">insert something here</span>
+            </div>
+            <div class="secondLevelStatic">
+                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <p>MICTA</p>
+                <span class="tooltip-right">insert something here</span>
+            </div>
+            <div class="secondLevelStatic">
+                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <p>MICTA Amendments - COVID 19</p>
+                <span class="tooltip-right">insert something here</span>
+            </div>
+            <div class="secondLevelStatic">
+                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <p>NASPO Wireless Data Voice Accessories Review</p>
+                <span class="tooltip-right">insert something here</span>
+            </div>
+            <div class="secondLevelStatic">
+                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <p>NVLPT UTAH - NASPO Valuepoint Contracts</p>
+                <span class="tooltip-right">insert something here</span>
+            </div>
+            <div class="secondLevelStatic">
+                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <p>Rural Connectivity Project</p>
+                <span class="tooltip-right">insert something here</span>
+            </div>
+            <div class="secondLevelStatic">
+                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <p>Satellite Voice-Data Services</p>
+                <span class="tooltip-right">insert something here</span>
+            </div>
+            <div class="secondLevelStatic">
+                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <p>Speech Generating Device Statewides</p>
+                <span class="tooltip-right">insert something here</span>
+            </div>
+            <div class="secondLevelStatic">
+                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <p>STPD-SW-1311-01_CDCR Radio Infa RFP</p>
+                <span class="tooltip-right">insert something here</span>
+            </div>
+            <div class="secondLevelStatic">
+                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <p>STPD-SW-1404-02_CHP Dispatch Consoles</p>
+                <span class="tooltip-right">insert something here</span>
+            </div>
+            <div class="secondLevelStatic">
+                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <p>STP-SW-1512-03_Amendment</p>
+                <span class="tooltip-right">insert something here</span>
+            </div>
+            <div class="secondLevelStatic">
+                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <p>STP-SW-1512-03_CDT SW PC Based RoIP Console</p>
+                <span class="tooltip-right">insert something here</span>
+            </div>
+            <div class="secondLevelStatic">
+                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <p>Structured Cabling Services</p>
+                <span class="tooltip-right">insert something here</span>
+            </div>
+            <div class="secondLevelStatic">
+                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <p>Telecom.PS.Radio LPAs transfer from DGS</p>
+                <span class="tooltip-right">insert something here</span>
+            </div>
+            <div class="secondLevelStatic">
+                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <p>Telemetry</p>
+                <span class="tooltip-right">insert something here</span>
+            </div>
+
+        </div>
+        <div id="resources" class="inner">
+            <div class="secondLevelStatic">
+                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <p>AIO-CIO LIST</p>
+                <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>BROWN BAGS</p>
-            </div>
-            <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
-                <p>TOOLS</p>
-            </div>
-            <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
-                <p>TELEWORK</p>
-            </div>
-            <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
-                <p>JOB AIDES</p>
-            </div>
-            <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
-                <p>PROCESSES & PROCEDURES</p>
-            </div>
-            <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
-                <p>GUIDELINES</p>
-            </div>
-            <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
-                <p>FAQ & SAMPLES</p>
-            </div>
-            <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
-                <p>EMERGENCY CONTRACTS CALENDAR</p>
-            </div>
-            <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
-                <p>CONTRACT NEGOTIATIONS</p>
+                <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>CHECKLISTS</p>
+                <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
-                <p>AIO-CIO LIST</p>
+                <p>CONTRACT BONDS</p>
+                <span class="tooltip-right">insert something here</span>
+            </div>
+            <div class="secondLevelStatic">
+                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <p>CONTRACT NEGOTIATIONS</p>
+                <span class="tooltip-right">insert something here</span>
+            </div>
+            <div class="secondLevelStatic">
+                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <p>DESK MANUAL</p>
+                <span class="tooltip-right">insert something here</span>
+            </div>
+            <div class="secondLevelStatic">
+                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <p>JOB AIDES</p>
+                <span class="tooltip-right">insert something here</span>
+            </div>
+            <div class="secondLevelStatic">
+                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <p>PROCESSES & PROCEDURES</p>
+                <span class="tooltip-right">insert something here</span>
+            </div>
+            <div class="secondLevelStatic">
+                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <p>PROTESTS AND PRAs</p>
+                <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>RFP</p>
+                <span class="tooltip-right">insert something here</span>
+            </div>
+            <div class="secondLevelStatic">
+                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <p>TELEWORK</p>
+                <span class="tooltip-right">insert something here</span>
+            </div>
+            <div class="secondLevelStatic">
+                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <p>TOOLS</p>
+                <span class="tooltip-right">insert something here</span>
             </div>
         </div>
         <div id="staff-folders" class="inner"></div>
         <div id="archive" class="inner"></div>
         <div id="policy" class="inner">
-            <div class="secondLevel" id="d8_policy-manuals"
-                onmouseover="newDirectory('d8_policy-manuals', 'policy', 'policy_policy-manuals')">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
-                <p>POLICY MANUALS</p>
-            </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
-                <p>DGS BB</p>
-            </div>
-            <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
-                <p>STP TL</p>
-            </div>
-            <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
-                <p>DEPARTMENT DELEGATED AUTHORITY</p>
-            </div>
-            <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
-                <p>STATUTES</p>
+                <p>AB971</p>
+                <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>ACCREDITATION</p>
+                <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
-                <p>POLICY</p>
+                <p>DEPARTMENT DELEGATED AUTHORITY</p>
+                <span class="tooltip-right">insert something here</span>
+            </div>
+            <div class="secondLevelStatic">
+                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <p>DGS BB</p>
+                <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>LEGISLATION</p>
+                <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
-                <p>AB971</p>
+                <p>POLICY MANUALS</p>
+                <span class="tooltip-right">insert something here</span>
             </div>
-            <!-- Start of third level for policy -->
-            <div id="policy_policy-manuals" class="show">
-                <div class="thirdLevelStatic">
-                    <img src="docset.png" , alt="docset" , width="20" , height="22">
-                    <p>third level doc</p>
-                </div>
-                <div class="thirdLevel" id="d8_x_another-third-level-doc"
-                    onmouseover="newDirectory('d8_x_another-third-level-doc', 'policy_policy-manuals', 'policy-manuals_another-third-level-doc')">
-                    <img src="docset.png" , alt="docset" , width="20" , height="22">
-                    <p>another third level doc</p>
-                </div>
-                <!-- Start of fourth level for policy -->
-                <div id="policy-manuals_another-third-level-doc" class="show">
-                    <div class="fourthLevelStatic">
-                        <img src="docset.png" , alt="docset" , width="20" , height="22">
-                        <p>fourth level doc</p>
-                    </div>
-                </div>
+            <div class="secondLevelStatic">
+                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <p>SCM</p>
+                <span class="tooltip-right">insert something here</span>
             </div>
-            <script>
-                function showDirectory(nextDirID, divID, parentClass = null) {
-                    var div = document.getElementById(divID);
-                    var currDirectory = document.getElementById(nextDirID);
-                    if (parentClass != null) {
-                        var children = document.querySelector("." + parentClass).children;
-                        for (var i = 0; i < children.length; i++) {
-                            classList = children[i].classList
-                            tagName = children[i].tagName
-                            if (tagName = "DIV" && classList.contains("show")) {
-                                classList.remove("show");
-                            }
-                            else if (tagName = "DIV" && classList.contains("active")) {
-                                classList.remove("active")
-                            }
-                        }
-                    }
-                    div.classList.add("active");
-                    currDirectory.classList.add("show");
-                }
-                function resetDirectory(nextDirID) {
-                    var children = document.querySelector("#" + nextDirID).children;
+            <div class="secondLevelStatic">
+                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <p>STATUTES</p>
+                <span class="tooltip-right">insert something here</span>
+            </div>
+            <div class="secondLevelStatic">
+                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <p>STP TL/p>
+                    <span class="tooltip-right">insert something here</span>
+            </div>
+        </div>
+        <script>
+            function showDirectory(nextDirID, divID, parentClass = null) {
+                var div = document.getElementById(divID);
+                var currDirectory = document.getElementById(nextDirID);
+                if (parentClass != null) {
+                    var children = document.querySelector("." + parentClass).children;
                     for (var i = 0; i < children.length; i++) {
-                        classList = children[i].classList;
-                        if (classList.contains("active")) {
-                            classList.remove("active");
-                        }
-                        else if (classList.contains("hide") && !children[i].id) {
-                            classList.remove("hide");
-                        }
-                        else if (classList.contains("show")) {
+                        classList = children[i].classList
+                        tagName = children[i].tagName
+                        if (tagName = "DIV" && classList.contains("show")) {
                             classList.remove("show");
-                            classList.add("hide");
-                            childDirectoryName = children[i].id;
-                            resetDirectory2(childDirectoryName);
+                        }
+                        else if (tagName = "DIV" && classList.contains("active")) {
+                            classList.remove("active")
                         }
                     }
                 }
-                function resetDirectory2(nextDirID) {
-                    var children = document.querySelector("#" + nextDirID).children;
-                    for (var i = 0; i < children.length; i++) {
-                        classList = children[i].classList;
-                        if (classList.contains("active")) {
-                            classList.remove("active");
-                        }
-                        else if (classList.contains("show")) {
-                            classList.remove("show");
-                            classList.add("hide");
-                            childDirectoryName = children[i].id;
-                            resetDirectory2(childDirectoryName);
-                        }
+                div.classList.add("active");
+                currDirectory.classList.add("show");
+            }
+            function resetDirectory(nextDirID) {
+                var children = document.querySelector("#" + nextDirID).children;
+                for (var i = 0; i < children.length; i++) {
+                    classList = children[i].classList;
+                    if (classList.contains("active")) {
+                        classList.remove("active");
+                    }
+                    else if (classList.contains("hide") && !children[i].id) {
+                        classList.remove("hide");
+                    }
+                    else if (classList.contains("show")) {
+                        classList.remove("show");
+                        classList.add("hide");
+                        childDirectoryName = children[i].id;
+                        resetDirectory2(childDirectoryName);
                     }
                 }
-                function checkDirectory(nextDirID, divID, parentClass = null) {
-                    showDirectory(nextDirID, divID, parentClass);
-                    resetDirectory(nextDirID);
-                }
-                function newDirectory(divID, parentID, nextDirID) {
-                    var children = document.querySelector("#" + parentID).children;
-                    for (var i = 0; i < children.length; i++) {
-                        tagName = children[i].tagName;
-                        classList = children[i].classList;
-                        if (tagName = "DIV" && children[i].id != nextDirID && children[i].id != divID) {
-                            classList.add("hide");
-                        }
-                        else {
-                            classList.remove("hide");
-                        }
+            }
+            function resetDirectory2(nextDirID) {
+                var children = document.querySelector("#" + nextDirID).children;
+                for (var i = 0; i < children.length; i++) {
+                    classList = children[i].classList;
+                    if (classList.contains("active")) {
+                        classList.remove("active");
                     }
-                    showDirectory(nextDirID, divID);
-                    resetDirectory(nextDirID);
+                    else if (classList.contains("show")) {
+                        classList.remove("show");
+                        classList.add("hide");
+                        childDirectoryName = children[i].id;
+                        resetDirectory2(childDirectoryName);
+                    }
                 }
-            </script>
+            }
+            function checkDirectory(nextDirID, divID, parentClass = null) {
+                showDirectory(nextDirID, divID, parentClass);
+                resetDirectory(nextDirID);
+            }
+            function newDirectory(divID, parentID, nextDirID) {
+                var children = document.querySelector("#" + parentID).children;
+                for (var i = 0; i < children.length; i++) {
+                    tagName = children[i].tagName;
+                    classList = children[i].classList;
+                    if (tagName = "DIV" && children[i].id != nextDirID && children[i].id != divID) {
+                        classList.add("hide");
+                    }
+                    else {
+                        classList.remove("hide");
+                    }
+                }
+                showDirectory(nextDirID, divID);
+                resetDirectory(nextDirID);
+            }
+        </script>
 
 </body>
 
