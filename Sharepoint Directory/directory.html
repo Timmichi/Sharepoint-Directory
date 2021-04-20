@@ -216,7 +216,7 @@
 </style>
 
 <body>
-    <!-- Naming convention:: DIV ID: (this would be 3 levels down) divID_x_newDirectory, LEVEL ID: (parentDirectory_newDirectory) -->
+    <!-- Naming convention:: DIV ID with naming convention: (divID_x_directoryName) where it is the path of the directory, PARENT ID, LEVEL ID: newID with naming convention: (parentDirectoryName_directoryName) -->
     <div class="content">
         <div id="d1" class="firstLevel" onmouseover="checkDirectory('departments', 'd1', 'content')">
             DEPARTMENTS
@@ -254,8 +254,9 @@
 
         <div id="departments" class="inner"></div>
         <div id="administration" class="inner">
-            <div class="secondLevel" id="d2_authority-approval"
-                onmouseover="newDirectory('d2_authority-approval', 'administration', 'administration_authority-approval')">
+            <div class="secondLevelStatic">
+                <!-- id="d2_authority-approval"
+                onmouseover="newDirectory('d2_authority-approval', 'administration', 'administration_authority-approval')"> -->
                 <img src="docset.png" , alt="docset" , width="20" , height="22">
                 <p>AUTHORITY APPROVAL</p>
                 <span class="tooltip-right">insert something here</span>
@@ -332,8 +333,8 @@
                 <p>VIRTUAL COMMUNICATION ACCOUNTS</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
-            <!-- Start of third level for administration -->
-            <div id="administration_authority-approval" class="show">
+
+            <!-- <div id="administration_authority-approval" class="show">
                 <div class="thirdLevelStatic">
                     <img src="docset.png" , alt="docset" , width="20" , height="22">
                     <p>third level doc</p>
@@ -345,7 +346,7 @@
                     <p>another third level doc</p>
                     <span class="tooltip-right">insert something here</span>
                 </div>
-                <!-- Start of fourth level for administration -->
+
                 <div id="authority-approval_another-third-level-doc" class="show">
                     <div class="fourthLevel" id="d2_x_x_fourth-level-doc"
                         onmouseover="newDirectory('d2_x_x_fourth-level-doc', 'authority-approval_another-third-level-doc', 'another-third-level-doc_fourth-level-doc')">
@@ -357,7 +358,7 @@
                         <img src="docset.png" , alt="docset" , width="20" , height="22">
                         <p>another fourth level doc</p>
                     </div>
-                    <!-- Start of fifth level for administration -->
+
                     <div id="another-third-level-doc_fourth-level-doc" class="show">
                         <div class="fifthLevelStatic">
                             <img src="docset.png" , alt="docset" , width="20" , height="22">
@@ -371,7 +372,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
         <div id="special-projects" class="inner">
             <div class="secondLevelStatic">
