@@ -41,7 +41,7 @@
         border-radius: 8px;
         border: transparent;
         transition: all 0.3s ease 0s;
-        cursor: default;
+        cursor: pointer;
         position: relative;
         z-index: 100;
     }
@@ -84,7 +84,7 @@
         border: 1px solid transparent;
         transition: all 0.3s ease 0s;
         background-color: transparent;
-        cursor: default;
+        cursor: pointer;
         position: relative;
         z-index: 100;
         font-size: 13px;
@@ -105,7 +105,6 @@
         box-shadow: 0px 15px 20px rgba(172, 167, 157, 0.4);
         color: #fff;
         transform: translateY(-7px);
-        cursor: default;
         z-index: 1000;
     }
 
@@ -189,6 +188,15 @@
         visibility: visible;
     }
 
+    .link-spanner {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
     img {
         margin-right: .25rem;
         float: left;
@@ -219,35 +227,59 @@
     <!-- Naming convention:: DIV ID with naming convention: (divID_x_directoryName) where it is the path of the directory, PARENT ID, LEVEL ID: newID with naming convention: (parentDirectoryName_directoryName) -->
     <div class="content">
         <div id="d1" class="firstLevel" onmouseover="checkDirectory('departments', 'd1', 'content')">
+            <a href=https://stateca.sharepoint.com/sites/Extranet/STP/G/departments/SitePages/Home.aspx>
+                <span class="link-spanner"></span>
+            </a>
             DEPARTMENTS
             <span class="tooltip-bottom">Contains internal working documents specific to departments</span>
         </div>
         <div id="d2" class="firstLevel" onmouseover="checkDirectory('administration', 'd2', 'content')">
+            <a href=https://stateca.sharepoint.com/sites/Extranet/STP/G/administration/SitePages/Home.aspx>
+                <span class="link-spanner"></span>
+            </a>
             ADMINISTRATION
             <span class="tooltip-bottom">Contains internal working documents specific to administration</span>
         </div>
         <div id="d3" class="firstLevel" onmouseover="checkDirectory('special-projects', 'd3', 'content')">
+            <a href=https://stateca.sharepoint.com/sites/Extranet/STP/G/specialprojects/SitePages/Home.aspx>
+                <span class="link-spanner"></span>
+            </a>
             SPECIAL PROJECTS
             <span class="tooltip-bottom">Contains unique activities that may fall outside the scope of regular duties
                 (Specific to STP)</span>
         </div>
         <div id="d4" class="firstLevel" onmouseover="checkDirectory('statewide-contracts', 'd4', 'content')">
+            <a href=https://stateca.sharepoint.com/sites/Extranet/STP/G/statewidecontracts/SitePages/Home.aspx>
+                <span class="link-spanner"></span>
+            </a>
             STATEWIDE CONTRACTS
             <span class="tooltip-bottom">Contains internal working documents related to statewide contracts</span>
         </div>
         <div id="d5" class="firstLevel" onmouseover="checkDirectory('resources', 'd5', 'content')">
+            <a href=https://stateca.sharepoint.com/sites/Extranet/STP/G/resources/SitePages/Home.aspx>
+                <span class="link-spanner"></span>
+            </a>
             RESOURCES
             <span class="tooltip-bottom">Contains internal working documents related to resources</span>
         </div>
         <div id="d6" class="firstLevel" onmouseover="checkDirectory('staff-folders', 'd6', 'content')">
+            <a href=https://stateca.sharepoint.com/sites/Extranet/STP/G/staff/SitePages/Home.aspx>
+                <span class="link-spanner"></span>
+            </a>
             STAFF FOLDERS
             <span class="tooltip-bottom">Contains folders for all STP staff</span>
         </div>
         <div id="d7" class="firstLevel" onmouseover="checkDirectory('archive', 'd7', 'content')">
+            <a href=https://stateca.sharepoint.com/sites/Extranet/STP/G/archive/SitePages/Home.aspx>
+                <span class="link-spanner"></span>
+            </a>
             ARCHIVE
             <span class="tooltip-bottom">Contains internal documents that have not been used for more than 1 year</span>
         </div>
         <div id="d8" class="firstLevel" onmouseover="checkDirectory('policy', 'd8', 'content')">
+            <a href=https://stateca.sharepoint.com/sites/Extranet/STP/G/policy/SitePages/Home.aspx>
+                <span class="link-spanner"></span>
+            </a>
             POLICY
             <span class="tooltip-bottom">Contains internal working documents related to policy</span>
         </div>
@@ -257,92 +289,152 @@
             <div class="secondLevelStatic">
                 <!-- id="d2_authority-approval"
                 onmouseover="newDirectory('d2_authority-approval', 'administration', 'administration_authority-approval')"> -->
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/administration/Shared%20Documents/AUTHORITY%20APPROVAL?d=w0c4754d433ed45fe9102188257b6cfb8>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>AUTHORITY APPROVAL</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/administration/Shared%20Documents/BCP%20DRILLS?d=w8a1895145c0a41048f532515f392f64c>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>BCP DRILLS</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/administration/Shared%20Documents/BILLING%20%26%20METRICS?d=w373b4d99338d46b1bd0582f2fd7e0131>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>BILLING & METRICS</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/administration/Shared%20Documents/CTS%20BILLABLE%20HOURS?d=w93085279be6b4e0b91def79b57aa7026>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>CTS BILLABLE HOURS</p>
                 <span class="tooltip-right">insert something here</span>
 
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/administration/Shared%20Documents/DATA%20DRILL?d=w0d93238245264520ba8839128d908f5f>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>DATA DRILL</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/administration/Shared%20Documents/FI%24CAL?d=wa6d831abb12646928f736840cef1900b>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>FI$CAL</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="excel.png" , alt="docset" , width="20" , height="22">
-                <p>GPOS Directory</p>
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/administration/Shared%20Documents/Human%20Resources?d=w40e08c79aafc424b8b7b5a8b98051ae8>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
+                <p>Human Resources</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
-                <p>HR</p>
-                <span class="tooltip-right">insert something here</span>
-            </div>
-            <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/administration/Shared%20Documents/LOGS?d=w5dbeb58f2b6e4349822dcddade1ce5e9>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>LOGS</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <span class="tooltip-right">insert something here</span>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/administration/Shared%20Documents/MEETINGS?d=w99beb5a2b4034adfa1d4c461fee38793>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>MEETINGS</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/administration/Shared%20Documents/OFFICE%20MAINTENANCE?d=w92d7b0b5fd0a416ab447f98f8575ebc2>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>OFFICE MAINTENANCE</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/administration/Shared%20Documents/STAFF%20ADMINISTRATION?d=wcb6f0ba454da40adb8aa95737616a65b>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>STAFF ADMINISTRATION</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/administration/Shared%20Documents/STP%20SHAREPOINT%20DIRECTORY.xlsx?d=w8524495267a749f8a220ad833e1d6593>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="excel" , alt="docset" , width="20" , height="22">
+                <p>STP SHAREPOINT DIRECTORY</p>
+                <span class="tooltip-right">insert something here</span>
+            </div>
+            <div class="secondLevelStatic">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/administration/Shared%20Documents/TELECOM?d=wbf0efc5afadc4dbc9baa383ed9e940ae>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>TELECOM</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/administration/Shared%20Documents/TRACKING?d=w1d6a086bba5a4874a3623c9f9d9eee78>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>TRACKING</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/administration/Shared%20Documents/VIRTUAL%20COMMUNICATION%20ACCOUNTS?d=wf795d7c36a6b46d1a558d42cec0be188>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>VIRTUAL COMMUNICATION ACCOUNTS</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
 
             <!-- <div id="administration_authority-approval" class="show">
                 <div class="thirdLevelStatic">
-                    <img src="docset.png" , alt="docset" , width="20" , height="22">
+                    <img class="docset" , alt="docset" , width="20" , height="22">
                     <p>third level doc</p>
                     <span class="tooltip-right">insert something here</span>
                 </div>
                 <div class="thirdLevel" id="d2_x_another-third-level-doc"
                     onmouseover="newDirectory('d2_x_another-third-level-doc', 'administration_authority-approval', 'authority-approval_another-third-level-doc')">
-                    <img src="docset.png" , alt="docset" , width="20" , height="22">
+                    <img class="docset" , alt="docset" , width="20" , height="22">
                     <p>another third level doc</p>
                     <span class="tooltip-right">insert something here</span>
                 </div>
@@ -350,23 +442,23 @@
                 <div id="authority-approval_another-third-level-doc" class="show">
                     <div class="fourthLevel" id="d2_x_x_fourth-level-doc"
                         onmouseover="newDirectory('d2_x_x_fourth-level-doc', 'authority-approval_another-third-level-doc', 'another-third-level-doc_fourth-level-doc')">
-                        <img src="docset.png" , alt="docset" , width="20" , height="22">
+                        <img class="docset" , alt="docset" , width="20" , height="22">
                         <p>fourth level doc</p>
                         <span class="tooltip-right">insert something here</span>
                     </div>
                     <div class="fourthLevelStatic">
-                        <img src="docset.png" , alt="docset" , width="20" , height="22">
+                        <img class="docset" , alt="docset" , width="20" , height="22">
                         <p>another fourth level doc</p>
                     </div>
 
                     <div id="another-third-level-doc_fourth-level-doc" class="show">
                         <div class="fifthLevelStatic">
-                            <img src="docset.png" , alt="docset" , width="20" , height="22">
+                            <img class="docset" , alt="docset" , width="20" , height="22">
                             <p>fifth level doc</p>
                             <span class="tooltip-right">insert something here</span>
                         </div>
                         <div class="fifthLevelStatic">
-                            <img src="docset.png" , alt="docset" , width="20" , height="22">
+                            <img class="docset" , alt="docset" , width="20" , height="22">
                             <p>another fifth level doc</p>
                             <span class="tooltip-right">insert something here</span>
                         </div>
@@ -376,120 +468,212 @@
         </div>
         <div id="special-projects" class="inner">
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/specialprojects/Shared%20Documents/COMPLETED?d=wa592e038adf8447c8f1724d0cdb0ea4f>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" alt="docset" , width="20" , height="22">
                 <p>COMPLETED</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/specialprojects/Shared%20Documents/IN%20PROGRESS?d=w916d119420c6438bbf8f8c1698d3b7c7>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" alt="docset" , width="20" , height="22">
                 <p>IN PROGRESS</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="folder.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/specialprojects/Shared%20Documents/P3?d=wf0cc17aa76fa475ebb27e570268994af>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="folder" , alt="docset" , width="20" , height="22">
                 <p>P3</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
         </div>
         <div id="statewide-contracts" class="inner">
             <div class="secondLevelStatic">
-                <img src="excel.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/statewidecontracts/Shared%20Documents/_Contract%20expiration%20tracker.xlsx?d=wba42741f0ccb4b53a6fa9f5f2c89b1b5>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="excel" , alt="docset" , width="20" , height="22">
                 <p>_Contract expiration tracker</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/statewidecontracts/Shared%20Documents/CALNET?d=we2627603c0d64ca18ee8aa69b2548df7>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>CALNET</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/statewidecontracts/Shared%20Documents/CALNET%20DNCS?d=w02c86dc35f1b47929c5f40ee0256ee91>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>CALNET DNCS</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/statewidecontracts/Shared%20Documents/CALNET%20Emergency%20Amendments%20-%202020?d=w0e84dcfb09aa4582b74e179220b9fad7>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>CALNET Emergency Amendments - 2020</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/statewidecontracts/Shared%20Documents/EVAQ?d=wa7ba5c73033643d2b3614da85bae5da4>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>EVAQ</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
 
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/statewidecontracts/Shared%20Documents/FirstNet%20C3A2FN9-18?d=w83988dcf28e14a27b915efb8c84748f6>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>FirstNET C3A2FN9-18</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/statewidecontracts/Shared%20Documents/MiCTA?d=w9c3d80b91a394ce3922f49e6328db124>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>MICTA</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/statewidecontracts/Shared%20Documents/MiCTA%20Amendments%20-%20COVID%2019?d=we5118c9f3e844e8fab991c21e7a753de>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>MICTA Amendments - COVID 19</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/statewidecontracts/Shared%20Documents/NASPO%20Wireless%20Data%20Voice%20Accessories%20Review?d=wf25ebb187e1d4d1a90ef9de6f2dfce1b>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>NASPO Wireless Data Voice Accessories Review</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/statewidecontracts/Shared%20Documents/NVLPT%20UTAH%20-%20NASPO%20Valuepoint%20Contracts?d=wf25cfb43191048dfb54768113d15f861>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>NVLPT UTAH - NASPO Valuepoint Contracts</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/statewidecontracts/Shared%20Documents/Rural%20Connectivity%20Project?d=wc4c502ed32cf4957884bb581c0d54ea2>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>Rural Connectivity Project</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/statewidecontracts/Shared%20Documents/Satellite%20Voice-Data%20Services?d=wb0c1bb28dc2b4744a7436ce1a5965691>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>Satellite Voice-Data Services</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/statewidecontracts/Shared%20Documents/Speech%20Generating%20Device%20Statewides?d=we6984096849c4cdaa080816d879fb183>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>Speech Generating Device Statewides</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/statewidecontracts/Shared%20Documents/STPD-SW-1311-01_CDCR%20Radio%20Infa%20RFP?d=w1856e78a8b794047812d597d335e35eb>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>STPD-SW-1311-01_CDCR Radio Infa RFP</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/statewidecontracts/Shared%20Documents/STPD-SW-1404-02_CHP%20Dispatch%20Consoles?d=w2ddd4ae46e3946bebd16ea8a1174cfcd>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>STPD-SW-1404-02_CHP Dispatch Consoles</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/statewidecontracts/Shared%20Documents/STP-SW-1512-03_Amendment?d=w3193f2df178940adbb67fce0e8aa439c>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>STP-SW-1512-03_Amendment</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/statewidecontracts/Shared%20Documents/STP-SW-1512-03_CDT%20SW%20PC%20Based%20RoIP%20Console?d=wd5765b39ee1542e8afe43bc4b15a984b>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>STP-SW-1512-03_CDT SW PC Based RoIP Console</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/statewidecontracts/Shared%20Documents/Structured%20Cabling%20Services?d=w77b514425dc4483e9419a1ff5d238012>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>Structured Cabling Services</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/statewidecontracts/Shared%20Documents/Telecom.PS.Radio%20LPAs%20transfer%20from%20DGS?d=waf929cdd1398445091f1a072158196f6>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>Telecom.PS.Radio LPAs transfer from DGS</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/statewidecontracts/Shared%20Documents/Telemetry?d=w4074cebd9545432599d14c13e4e112b7>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>Telemetry</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
@@ -497,62 +681,137 @@
         </div>
         <div id="resources" class="inner">
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/resources/Shared%20Documents/AIO-CIO%20LIST?d=w791cfb711a104c55953541b4c7216685>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>AIO-CIO LIST</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/resources/Shared%20Documents/BROWN%20BAGS?d=wb42ad828187041f8ade4f3f9f7aff174>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>BROWN BAGS</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/resources/Shared%20Documents/CHECKLISTS?d=wc5bd6f84318449c5902be8d4397d2636>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>CHECKLISTS</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/resources/Shared%20Documents/CONTRACT%20BONDS?d=w54ee540b15e74a8ba129b63bc552b33d>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>CONTRACT BONDS</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/resources/Shared%20Documents/CONTRACT%20NEGOTIATIONS?d=wd0e5f3273e5c4f78882efd8053f8d12f>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>CONTRACT NEGOTIATIONS</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/resources/Shared%20Documents/DESK%20MANUAL?d=w9179692ab717404488256cedad0c7161>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>DESK MANUAL</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/resources/Shared%20Documents/EMERGENCY%20CONTRACTS%20CALENDAR?d=w6642005fb78940d3b92bb05f3fccec7d>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
+                <p>EMERGENCY CONTRACTS CALENDAR</p>
+                <span class="tooltip-right">insert something here</span>
+            </div>
+            <div class="secondLevelStatic">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/resources/Shared%20Documents/FAQ%20%26%20SAMPLES?d=w7282a51a383b4e3eb5ffe5e6bc952638>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
+                <p>FAQ & SAMPLES</p>
+                <span class="tooltip-right">insert something here</span>
+            </div>
+            <div class="secondLevelStatic">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/resources/Shared%20Documents/GUIDELINES?d=weaafafe2d5c94c5787c9d2e921124544>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
+                <p>GUIDELINES</p>
+                <span class="tooltip-right">insert something here</span>
+            </div>
+            <div class="secondLevelStatic">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/resources/Shared%20Documents/JOB%20AIDES?d=w8318ed2ec1ce4f3f857878cb9bbd18ec>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>JOB AIDES</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/resources/Shared%20Documents/PROCESSES%20%26%20PROCEDURES?d=w664b303918af4ff28bcd72ddfa400e80>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>PROCESSES & PROCEDURES</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/resources/Shared%20Documents/PROTESTS%20AND%20PRAs?d=wad4dad06b38e4dd181eccc22d415b471>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>PROTESTS AND PRAs</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/resources/Shared%20Documents/RFP?d=wf5a4a1af8eec40a381ba1d7daf6159ef>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>RFP</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/resources/Shared%20Documents/TELEWORK?d=wba8616d60e3d4ccfb7cff84f382738af>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>TELEWORK</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/resources/Shared%20Documents/TOOLS?d=we95697e7b37546119e02b73c8cf038c6>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>TOOLS</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
@@ -561,52 +820,108 @@
         <div id="archive" class="inner"></div>
         <div id="policy" class="inner">
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/policy/Shared%20Documents/AB971?d=wb8cde9adae824c75957db7d3f2fa1d2f>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>AB971</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/policy/Shared%20Documents/ACCREDITATION?d=w89620fa830f34d148f2cf428be9d57c0>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>ACCREDITATION</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/policy/Shared%20Documents/DEPARTMENT%20DELEGATED%20AUTHORITY?d=w5f2feadfb5fb4cf587d8bd01b6b27b63>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>DEPARTMENT DELEGATED AUTHORITY</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/policy/Shared%20Documents/DGS%20BB?d=w058d78876b0d47b38b9b7f48a4b11842>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>DGS BB</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/policy/Shared%20Documents/LEGISLATION?d=wd0cf3babb9c245b08b8f17b25265a24b>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>LEGISLATION</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/policy/Shared%20Documents/POLICY%20MANUALS?d=wbf0bd19b5bb343b8bf091e593eedf9aa>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>POLICY MANUALS</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/policy/Shared%20Documents/SCM?d=w13056aac2d04492f8eaba0e37e196306>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>SCM</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/policy/Shared%20Documents/STATUTES?d=wa2c4ec96b2804607aa2796ad7673824a>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>STATUTES</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
             <div class="secondLevelStatic">
-                <img src="docset.png" , alt="docset" , width="20" , height="22">
+                <a
+                    href=https://stateca.sharepoint.com/sites/Extranet/STP/G/policy/Shared%20Documents/STP%20TL?d=w75395e9742044a8eaef7fa2f797d6aa9>
+                    <span class="link-spanner"></span>
+                </a>
+                <img class="docset" , alt="docset" , width="20" , height="22">
                 <p>STP TL</p>
                 <span class="tooltip-right">insert something here</span>
             </div>
         </div>
         <script>
+            var docset = "https://stateca.sharepoint.com/:i:/r/sites/Extranet/STP/G/staff/Shared%20Documents/TIMOTHY%20SIMANHADI/docset.png?csf=1&web=1&e=3PVW2L";
+            var x = document.querySelectorAll("img[class='docset']");
+            x.forEach(img => img.src = docset);
+
+            var docset = "https://stateca.sharepoint.com/:i:/r/sites/Extranet/STP/G/staff/Shared%20Documents/TIMOTHY%20SIMANHADI/folder.png?csf=1&web=1&e=g0DQnc";
+            var x = document.querySelectorAll("img[class='folder']");
+            x.forEach(img => img.src = docset);
+
+            var docset = "https://stateca.sharepoint.com/:i:/r/sites/Extranet/STP/G/staff/Shared%20Documents/TIMOTHY%20SIMANHADI/excel.png?csf=1&web=1&e=aciksB";
+            var x = document.querySelectorAll("img[class='excel']");
+            x.forEach(img => img.src = docset);
+
+            var docset = "https://stateca.sharepoint.com/:i:/r/sites/Extranet/STP/G/staff/Shared%20Documents/TIMOTHY%20SIMANHADI/pdf.png?csf=1&web=1&e=EnNISd";
+            var x = document.querySelectorAll("img[class='pdf']");
+            x.forEach(img => img.src = docset);
+
+            var docset = "https://stateca.sharepoint.com/:i:/r/sites/Extranet/STP/G/staff/Shared%20Documents/TIMOTHY%20SIMANHADI/word.png?csf=1&web=1&e=40bKPB";
+            var x = document.querySelectorAll("img[class='word']");
+            x.forEach(img => img.src = docset);
+
             function showDirectory(nextDirID, divID, parentClass = null) {
                 var div = document.getElementById(divID);
                 var currDirectory = document.getElementById(nextDirID);
